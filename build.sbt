@@ -32,5 +32,6 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.1.3",
   "com.storm-enroute" %% "scalameter" % "0.6",
-  "org.reactivemongo" %% "reactivemongo" % "0.11.2"
+  "org.reactivemongo" %% "reactivemongo" % "0.11.2",
+  "com.evojam" %% "mongo-driver-scala" % "0.4.4-SNAPSHOT"
 )
