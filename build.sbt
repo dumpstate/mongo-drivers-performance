@@ -34,5 +34,6 @@ libraryDependencies ++= Seq(
   "com.storm-enroute" %% "scalameter" % "0.6",
   "org.reactivemongo" %% "reactivemongo" % "0.11.2",
   "com.evojam" %% "mongo-driver-scala" % "0.4.4-SNAPSHOT",
-  "org.mongodb" % "mongodb-driver-async" % "3.0.2"
+  "org.mongodb" % "mongodb-driver-async" % "3.0.2",
+  "org.mongodb" % "mongodb-driver" % "3.0.2"
 )
