@@ -12,7 +12,7 @@ object EvoScalaInsert extends PerformanceTest.Quickbenchmark with EvoScalaCollec
     val collection = getCollection()
 
     measure method "insertAll" in {
-      using(documents) in { ds =>
+      using(genDocuments) in { ds =>
         val insert = Future.sequence(ds.map(collection.insert(_)))
         Await.result(insert, Duration.Inf)
 

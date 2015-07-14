@@ -11,8 +11,8 @@ object MongoAsyncInsert extends PerformanceTest.Quickbenchmark with MongoAsyncCo
   performance of "mongodb-driver-async" in {
     val collection = getCollection()
 
-    measure method "insertAll" in {
-      using(documents) in { ds =>
+    measure method "insertMany" in {
+      using(genDocuments) in { ds =>
         val insert: Promise[Void] = Promise()
         collection.insertMany(ds, new SingleResultCallback[Void] {
           override def onResult(t: Void, throwable: Throwable): Unit = {

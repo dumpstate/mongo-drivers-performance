@@ -12,7 +12,7 @@ object MongoCoreInsert extends PerformanceTest.Quickbenchmark with MongoCoreColl
     val collection = getCollection()
 
     measure method "insertAll" in {
-      using(documents) in { ds =>
+      using(genDocuments) in { ds =>
         val insert = Future {
           collection.insertMany(ds)
         }

@@ -4,7 +4,6 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
 
-import com.evojam.mongodb.client.performance.Config._
 import org.scalameter.api._
 
 object ReactiveMongoInsert extends PerformanceTest.Quickbenchmark with ReactiveMongoCollection {

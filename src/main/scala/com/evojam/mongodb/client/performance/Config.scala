@@ -4,13 +4,15 @@ import org.scalameter.api._
 
 import com.evojam.mongodb.client.performance.util.DocumentGenerator
 
-object Config extends DocumentGenerator {
+trait Config extends DocumentGenerator {
   val DbName = "performancetest"
   val ColName = "collection"
 
-  val sizes: Gen[Int] = Gen.range("sizes")(100, 1000, 500)
+  val InsertBeforeFind = 100
 
-  val docSize = 5//nextDocSize
+  val sizes: Gen[Int] = Gen.range("sizes")(100, 1000, 100)
+
+  val docSize = 3//nextDocSize
 
   val schema = nextSchema(size = docSize)
 
