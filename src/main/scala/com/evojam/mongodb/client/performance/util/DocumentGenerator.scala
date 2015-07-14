@@ -36,12 +36,12 @@ trait DocumentGenerator {
       .take(Random.nextInt(MaxPropNameLength - MinPropNameLength) + MinPropNameLength)
       .mkString
 
-  private def nextJsonType() =
-    Random.nextInt(3) match {
-      case 0 => JsonType.Number
-      case 1 => JsonType.Boolean
-      case _ => JsonType.String
-    }
+  private def nextJsonType() = JsonType.String
+//    Random.nextInt(3) match {
+//      case 0 => JsonType.Number
+//      case 1 => JsonType.Boolean
+//      case _ => JsonType.String
+//    }
 
   private def nextJsonValue(propType: JsonType.Value) = propType match {
     case JsonType.Number => Random.nextDouble()
